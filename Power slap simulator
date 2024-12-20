@@ -1,0 +1,276 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("XHub | power slap simulator", "Ocean")
+
+local Tab = Window:NewTab("Main")
+
+local Section = Tab:NewSection("Main")
+
+Section:NewButton("infinite yield", "infinite yield script", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+Section:NewButton("Fly", "Fly script", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+Section:NewToggle("inf power", "Click me for auto!", function(state)
+    if state then
+        _G.auto = true
+    
+    
+    while _G.auto do
+local args = {
+    [1] = "ClickStat",
+    [2] = 400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+wait(0.1)
+end
+    else
+        _G.auto = false
+    
+    
+    while _G.auto do
+local args = {
+    [1] = "ClickStat",
+    [2] = 400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+wait(0.1)
+end
+    end
+end)
+
+Section:NewKeybind("Toggle ui", "click F", Enum.KeyCode.F, function()
+    Library:ToggleUI()
+end)
+
+Section:NewButton("inf wins (need fight to target)", "op", function()
+    local args = {
+    [1] = "Wins"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewToggle("inf win (need fight)", "you need fight to target", function(state)
+    if state then
+        _G.auto = true
+    
+    
+    while _G.auto do
+local args = {
+    [1] = "Wins"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+wait(0.1)
+end
+    else
+        _G.auto = false
+    
+    
+    while _G.auto do
+local args = {
+    [1] = "Wins"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+wait(0.1)
+end
+    end
+end)
+
+Section:NewButton("more gui (not by me)", "one more its not by me!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bruddaa/PSSim/main/gui.lua"))()
+end)
+
+-- Teleport
+local Tab = Window:NewTab("Teleport")
+
+local Section = Tab:NewSection("teleports")
+
+Section:NewButton("teleport main island", "island 1", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Island"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport winter island", "island 2", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport Spooky island", "island 3", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Spooky"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport Anime island", "island 4", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Anime"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport desert island", "island 5", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Desert"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport Underworld island", "island 6", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Underworld"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport luck island", "island 7", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Luck"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport ice island", "island 8", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Ice"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport volcano island", "island 9", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Volcano"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport mars island", "island 10", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Mars"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport robot island", "island 11", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Robot"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+Section:NewButton("Teleport pyramid island", "island 12", function()
+    local args = {
+    [1] = "Portal",
+    [2] = 0,
+    [3] = "Pyramid"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Client"):InvokeServer(unpack(args))
+end)
+
+local Tab = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Made by ff india")
+
+Section:NewLabel("dont forget to subscribe ff india")
+
+local Tab = Window:NewTab("Bonus")
+
+local Section = Tab:NewSection("bonus")
+
+Section:NewButton("Turtle Spy", "Bonus", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Spy/main/source.lua", true))()
+end)
+
+local Tab = Window:NewTab("Teleport boss")
+
+local Section = Tab:NewSection("Tp boss")
+
+Section:NewButton("Grimace world", "boss map 1", function()
+game:GetService("ReplicatedStorage").Remotes.Travel:FireServer("Grimace")
+end)
+
+Section:NewButton("Skibidi world", "Boss map 2", function()
+game:GetService("ReplicatedStorage").Remotes.Travel:FireServer("Skibidi")
+end)
+
+Section:NewButton("Candy world", "Boss map 3", function()
+game:GetService("ReplicatedStorage").Remotes.Travel:FireServer("Candy")
+end)
+
+Section:NewButton("Aqua world", "Boss map 4", function()
+game:GetService("ReplicatedStorage").Remotes.Travel:FireServer("Aqua")
+end)
+
+Section:NewButton("Dino world", "Boss map 5", function()
+game:GetService("ReplicatedStorage").Remotes.Travel:FireServer("Dino")
+end)
+ 
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ 
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle ui"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+ 
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
